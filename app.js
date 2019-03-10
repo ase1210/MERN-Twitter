@@ -17,7 +17,11 @@ app.use(bodyParser.urlencoded({
   extended: false
 }));
 app.use(bodyParser.json());
-app.get("/", (req, res) => res.send("Another wait again? message"));
+
+app.get("/", (req, res) => {
+  res.send("Hello World");
+});
+
 app.use("/api/users", users);
 app.use("/api/tweets", tweets);
 
