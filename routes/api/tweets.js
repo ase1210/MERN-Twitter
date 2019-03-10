@@ -26,6 +26,8 @@ router.post('/',
       user: req.user.id,
       text: req.body.text
     });
+
+    newTweet.save().then(tweet => res.json(tweet));
   }
 );
 
